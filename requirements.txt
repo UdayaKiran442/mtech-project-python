@@ -1,2 +1,7 @@
 fastapi[standard]
 sentence-transformers
+langchain
+langchain-experimental
+langchain-community
+langchain-neo4j
+neo4j
