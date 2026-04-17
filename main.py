@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from services.services import convert_text_to_embeddings_service
+from services.sentence_transformer import convert_text_to_embeddings_service
 
 app = FastAPI()
 
