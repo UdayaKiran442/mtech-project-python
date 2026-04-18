@@ -6,9 +6,6 @@ from services.neo4j import upsert_to_neo4j_service
 
 app = FastAPI()
 
-class IUpsertToNeo4j(BaseModel):
-    text: str
-
 @app.get("/")
 def root():
     return {"message": "Hello World"}
@@ -23,6 +20,9 @@ def convert_text_to_embeddings(sentences: list[str]):
             return {"error": str(e)}
         return {"error": "An unexpected error occurred in python service."}
     
+class IUpsertToNeo4j(BaseModel):
+    text: str
+
 @app.post("/neo4j/upsert")
 def upsert_text_to_neo4j(payload: IUpsertToNeo4j):
     try:
