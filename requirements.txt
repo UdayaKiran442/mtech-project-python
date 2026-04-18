@@ -5,3 +5,8 @@ langchain-experimental
 langchain-community
 langchain-neo4j
 neo4j
+peft
+torch
+transformers
+bitsandbytes>=0.46.1
+langchain-openai
