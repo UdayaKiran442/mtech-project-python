@@ -86,7 +86,7 @@ def upsert_to_neo4j_service(text: str):
         graph_instance.query(node_query, params={"nodes": nodes})
         graph_instance.query(rel_query, params={"relationships": relationships})
 
-        return {"message": f"Upserted {len(nodes)} nodes and {len(relationships)} relationships successfully."}
+        return f"Upserted {len(nodes)} nodes and {len(relationships)} relationships successfully."
 
     except Exception as e:
         return f"An error occurred while upserting to Neo4j: {str(e)}"
